@@ -11,12 +11,26 @@ define(['oxjs','./search-suggest'],function(OX,SearchSuggest){
                 lastLi=null;
             }
         });
+        $mod.on('tap','.bt-del',function(e){
+            var symbol=this.getAttribute('data-symbol')
+            OX.callapi('update'+userRelDS, {
+                query:{
+                    user: loginUser
+                },
+                update:{
+                    $pull:{
+                        rel:symbol
+                    }
+                }
+
+            }, afterSave);
+        })
         var searchInput=$mod.find('.J_search');
 
         var userRelDS='/user-rel@25875f75238b2609b633f6285',
             loginUser=$mod.attr('data-uid'),
             afterSave=function(){
-                //location.reload(true);
+                location.reload(true);
             };
         SearchSuggest.init(searchInput.on('filled:suggest',function(){
             var newSymbol=searchInput.val();
