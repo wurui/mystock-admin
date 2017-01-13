@@ -1,3 +1,60 @@
-.oxmod-mystock-admin{
-/* CSS */
- }
+.oxmod-mystock-admin {
+  /* CSS */
+}
+.oxmod-mystock-admin ul {
+  width: 100%;
+  overflow: hidden;
+}
+.oxmod-mystock-admin .searchbar {
+  padding: 10px;
+  text-align: center;
+}
+.oxmod-mystock-admin .searchbar > input {
+  width: 90%;
+  height: 30px;
+  border: solid 1px #f1f1f1;
+  padding: 2px 5px;
+}
+.oxmod-mystock-admin .rel-list {
+  height: 36px;
+  line-height: 36px;
+  padding-left: 10px;
+  border-bottom: solid 1px #f1f1f1;
+}
+.oxmod-mystock-admin .bt-del {
+  background-color: red;
+  height: 100%;
+  border: none;
+  width: 50px;
+  color: #fff;
+  float: right;
+  margin-right: -50px;
+  transition: all .3s;
+}
+.oxmod-mystock-admin .show-del .bt-del {
+  margin-right: 0px;
+}
+.oxmod-mystock-admin .suggest {
+  position: absolute;
+  z-index: 1;
+  margin-top: 30px;
+  margin-left: 14px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  padding: 5px 0;
+}
+.oxmod-mystock-admin .suggest li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: solid 1px #f1f1f1;
+  color: #666;
+  text-align: left;
+  margin: 0 5px;
+}
+.oxmod-mystock-admin .suggest li:last-child {
+  border-bottom: none;
+}
+.oxmod-mystock-admin .suggest li:hover {
+  color: #333;
+  background-color: #eee;
+}

@@ -1,0 +1,67 @@
+.oxmod-mystock-admin{
+/* CSS */
+  ul{
+    width:100%;
+    overflow:hidden;
+  }
+  .searchbar{
+
+    padding:10px;
+    >input{
+      width:90%;
+      height:30px;
+      border:solid 1px #f1f1f1;
+      padding:2px 5px;
+    }
+    text-align: center;
+
+  }
+  .rel-list{
+    height:36px;
+    line-height: 36px;
+    padding-left:10px;
+    border-bottom: solid 1px #f1f1f1;
+
+    //transform: translate(-50px,0);
+  }
+  .bt-del{
+    background-color: red;
+    height:100%;
+    border:none;
+    width:50px;
+    color:#fff;
+    float:right;
+    margin-right:-50px;
+    transition: all .3s;
+  }
+  .show-del{
+    .bt-del{
+      margin-right:0px;
+    }
+  }
+  .suggest{
+    position: absolute;
+    z-index: 1;
+    margin-top: 30px;
+    margin-left:14px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    padding:5px 0;
+    li{
+      height:30px;
+      line-height: 30px;
+      border-bottom: solid 1px #f1f1f1;
+      color:#666;
+
+      text-align: left;
+      margin:0 5px;
+      &:last-child{
+        border-bottom: none;
+      }
+      &:hover{
+        color:#333;
+        background-color: #eee;
+      }
+    }
+  }
+ }
