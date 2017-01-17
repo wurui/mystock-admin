@@ -74,9 +74,8 @@ define(['oxjs', './search-suggest'], function (OX, SearchSuggest) {
             })
             var searchInput = $mod.find('.J_search');
 
-            var loginUser = $mod.attr('data-uid'),
-                afterSave = function () {
-                    //location.reload(true);
+            var afterSave = function () {
+                    location.reload(true);
                 };
             SearchSuggest.init(searchInput.on('filled:suggest', function () {
                 var newSymbol = searchInput.val();
