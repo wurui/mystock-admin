@@ -1,6 +1,6 @@
 define(['oxjs', './search-suggest'], function (OX, SearchSuggest) {
     OX.config({devHost:'//local.openxsl.com'})
-    var targetDS = '/stock-analysis@';
+    var targetDS = '/stock-analysis@2587e07e58e56c13341dc76ac';
     var fav=function(newSymbol,fn){//看它有没有,有的话,喜欢之,没有的话,获取详细信息插入再喜欢之
         var callfav=function(tid){
             OX.callapi('fav' + targetDS, {
@@ -52,7 +52,7 @@ define(['oxjs', './search-suggest'], function (OX, SearchSuggest) {
     return {
         init: function ($mod) {
             var lastLi = null;
-            targetDS+=$mod.attr('data-dsid');
+            //targetDS+=$mod.attr('data-dsid');
 
 
             $mod.on('swipeLeft', 'li', function () {
