@@ -14,17 +14,39 @@
         <icon>//oxm1.cc/img/app_default.png</icon>
     </p>
     <data>
-        <user-rel>
+        <stock-analysis ADAPTERID="2587df42dca0b15ab810cc602">
             <i>
-                <user>
-                    wurui
-                </user>
-                <rel>
-                    <i>BABA</i>
-                    <i>AAPL</i>
-                </rel>
+                <_id>587df458039c489ffebe01cb</_id>
+                <symbol>NVO</symbol>
+                <close>35.73</close>
+                <med>51.09</med>
+                <lastDate>20170112</lastDate>
             </i>
-        </user-rel>
+            <i>
+                <symbol>FMX</symbol>
+                <close>75.00</close>
+                <med>91.25</med>
+                <lastDate>20170112</lastDate>
+            </i>
+            <i>
+                <symbol>BUD</symbol>
+                <close>105.00</close>
+                <med>123.94</med>
+                <lastDate>20170112</lastDate>
+            </i>
+            <i>
+                <symbol>GILD</symbol>
+                <close>73.17</close>
+                <med>82.29</med>
+                <lastDate>20170112</lastDate>
+            </i>
+            <i>
+                <symbol>BMY</symbol>
+                <close>56.00</close>
+                <med>62</med>
+                <lastDate>20170112</lastDate>
+            </i>
+        </stock-analysis>
     </data>
 
 </root>
