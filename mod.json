@@ -1,6 +1,6 @@
 {
   "name": "mystock-admin",
   "version": "1.0.0",
-  "apiDependencies": ["user-rel"]
+  "apiDependencies": ["stock-analysis"]
 }
 
