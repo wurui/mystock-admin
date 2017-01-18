@@ -1,6 +1,7 @@
 define(['oxjs', './search-suggest'], function (OX, SearchSuggest) {
     OX.config({devHost:'//local.openxsl.com'})
     var targetDS = '/stock-analysis@2587e07e58e56c13341dc76ac';
+    //targetDS='/stock-analysis@2587df42dca0b15ab810cc602'
     var fav=function(newSymbol,fn){//看它有没有,有的话,喜欢之,没有的话,获取详细信息插入再喜欢之
         var callfav=function(tid){
             OX.callapi('fav' + targetDS, {
@@ -75,7 +76,7 @@ define(['oxjs', './search-suggest'], function (OX, SearchSuggest) {
             var searchInput = $mod.find('.J_search');
 
             var afterSave = function () {
-                    location.reload(true);
+                    //location.reload(true);
                 };
             SearchSuggest.init(searchInput.on('filled:suggest', function () {
                 var newSymbol = searchInput.val();
