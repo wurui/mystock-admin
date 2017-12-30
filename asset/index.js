@@ -14,7 +14,7 @@ define(['oxjs'], function (OXJS) {
                 }
             });
             $mod.on('tap', '.bt-del', function (e) {
-                var symbol = this.getAttribute('data-id')
+                var symbol = this.getAttribute('data-symbol')
 
                 $mod.OXDelete( {
                     $fav:{
@@ -22,10 +22,10 @@ define(['oxjs'], function (OXJS) {
                             symbol:symbol
                         }
                     }
-                },function(){
-                    $mod.OXRefresh();
                 });
-            })
+            }).on(OXJS.MODEL_EVENT.AFTER_WRITE,function(){
+                $mod.OXRefresh();
+            });
             
 
 

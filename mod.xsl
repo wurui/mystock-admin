@@ -7,7 +7,7 @@
             <ul>
             <xsl:for-each select="data/stock-analysis/i">
                 <li class="rel-list">
-                    <button class="bt-del" data-id="{_id}">Delete</button>
+                    <button class="bt-del" data-symbol="{symbol}">Delete</button>
                     <xsl:value-of select="symbol"/>
                 </li>
             </xsl:for-each>
