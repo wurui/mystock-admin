@@ -3,9 +3,7 @@
     <xsl:template match="/root" name="wurui.mystock-admin">
         <!-- className 'J_OXMod' required  -->
         <div class="J_OXMod oxmod-mystock-admin" ox-mod="mystock-admin" data-uid="{login/uid}" data-dsid="{data/stock-analysis/attribute::ADAPTERID}">
-            <div class="searchbar">
-                <input type="search" class="J_search" placeholder="input a symbol"/>
-            </div>
+        
             <ul>
             <xsl:for-each select="data/stock-analysis/i">
                 <li class="rel-list">

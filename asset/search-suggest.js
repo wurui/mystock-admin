@@ -1,7 +1,8 @@
 define(['oxjs','mustache'], function (OX,Mustache) {
     var tpl='<ul>{{#data}}<li>{{Symbol}}</li>{{/data}}</ul>'
     var ajax = function (wd,fn) {
-        OX.getJSON('http://momofox.com:8000/company/querysymbol?wd='+wd,fn)
+        //OX.getJSON('http://momofox.com:8000/company/querysymbol?wd='+wd,fn)
+
     };
     return {
         init: function (searchInput) {
@@ -9,6 +10,12 @@ define(['oxjs','mustache'], function (OX,Mustache) {
             searchInput.on('keyup focus',function(){
                 if(TO)clearTimeout(TO);
                 TO=setTimeout(function(){
+                    sugguest.OXRefresh({
+                        'stock-analysis':{
+                            symbol:$.trim(searchInput.val())
+                        }
+                    });
+                    /*
                     ajax($.trim(searchInput.val()),function(r){
 
                         if(r && r.data){
@@ -22,12 +29,12 @@ define(['oxjs','mustache'], function (OX,Mustache) {
                             sugguest.empty().hide();
                         }
 
-                    })
+                    })*/
                 },300)
             }).on('blur',function(){
                 sugguest.hide()
             });
-            var sugguest=$('<div class="suggest"/>').prependTo(searchInput.parent()).css({
+            var sugguest=$('.J_suggest').css({
                 width:searchInput.width()
 
             }).hide().on('tap','li',function(){
